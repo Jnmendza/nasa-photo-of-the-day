@@ -22,7 +22,8 @@ export default function Apod() {
             <ApodCard                    
                     title={photo.title}
                     date={photo.date}
-                    image={photo.url}
+                    explanation={photo.explanation}
+                    url={photo.url}
                 />
 
         </div>

@@ -7,6 +7,7 @@ const ApodCard = props => {
             <h2> Title: {props.title} </h2>
             <p>{props.date}</p>
             <img src={props.url} alt="Space"/>
+            <p>{props.explanation}</p>
 
         </div>
 
