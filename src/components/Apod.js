@@ -1,6 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ApodCard from "./ApodCard"
+import styled from 'styled-components';
+
+
+
+const ApodContainer = styled.div`
+    display: flex;
+    margin: auto;
+    background: rgba(128, 128, 128, 0.5);
+    width: 80%;
+
+`;
 
 export default function Apod() {
 
@@ -15,9 +26,10 @@ export default function Apod() {
         //     console.log(`APOD not returned`, error);
         //   });
     },[]);
+    
     console.log(photo)
     return (
-        <div className="photo">
+        <ApodContainer>
             
             <ApodCard                    
                     title={photo.title}
@@ -26,6 +38,6 @@ export default function Apod() {
                     url={photo.url}
                 />
 
-        </div>
+        </ApodContainer>
     );
 }
